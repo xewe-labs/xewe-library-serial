@@ -1,5 +1,7 @@
 # XeWeSerial
 
+> Full reference: [`doc/`](doc/) · Agent rules: [`doc/AGENTS.md`](doc/AGENTS.md)
+
 Non-blocking serial console for ESP32.
 
 ```cpp
