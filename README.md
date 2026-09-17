@@ -29,4 +29,5 @@ void loop() {
 
 In `print_header`, a `\sep` token inside the message draws a separator line.
 
-Depends on XeWeUtils. See `examples/Prompts`.
+Depends on XeWeUtils. Three examples in [`examples/`](examples/): `01_HelloSerial`,
+`02_Prompts`, `03_SetupWizard`.

@@ -34,4 +34,12 @@ repository, not just this folder.
 [XeWeCli](https://github.com/xewe-labs/xewe-library-cli) and
 [XeWeOS](https://github.com/xewe-labs/xewe-library-os).
 
-See [`examples/Prompts`](../examples/Prompts) for a runnable sketch.
+## Examples
+
+Three sketches, in increasing order of scope:
+
+| | | |
+|---|---|---|
+| low | [`01_HelloSerial`](../examples/01_HelloSerial) | a config override, printing, and the non-blocking line loop |
+| mid | [`02_Prompts`](../examples/02_Prompts) | `get_string`, `get_int`, `get_yn` and a table |
+| high | [`03_SetupWizard`](../examples/03_SetupWizard) | a wizard that can give up: `retry_count`, `timeout_ms`, `success_sink`, `get_menu_choice`, and `render_table` captured as a string |
