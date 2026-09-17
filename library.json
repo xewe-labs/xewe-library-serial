@@ -1,6 +1,6 @@
 {
   "name": "XeWeSerial",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Non-blocking serial console for ESP32 with formatted output, boxed headers, tables, and typed input prompts.",
   "keywords": [
     "communication"
@@ -28,7 +28,7 @@
     {
       "owner": "xewe-labs",
       "name": "XeWeUtils",
-      "version": ">=0.1.0"
+      "version": ">=1.0.0"
     }
   ],
   "export": {
