@@ -1,7 +1,7 @@
 {
   "name": "XeWeSerial",
   "version": "1.0.0",
-  "description": "Non-blocking serial console for ESP32 with formatted output, boxed headers, tables, and typed input prompts.",
+  "description": "Non-blocking serial console with formatted output, boxed headers, tables, and typed input prompts.",
   "keywords": [
     "communication"
   ],
@@ -19,7 +19,12 @@
   "homepage": "https://github.com/xewe-labs/xewe-library-serial",
   "frameworks": "arduino",
   "platforms": [
-    "espressif32"
+    "espressif32",
+    "espressif8266",
+    "nordicnrf52",
+    "raspberrypi",
+    "renesas-ra",
+    "ststm32"
   ],
   "headers": [
     "XeWeSerial.h"

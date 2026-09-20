@@ -9,8 +9,12 @@ namespace xewe {
 
 void SerialPort::begin(const SerialPortConfig& cfg) {
     echo = cfg.echo;
+    // ESP32 only: other cores size their UART buffers at build time and simply
+    // use their own defaults. The config fields are ignored there.
+#if defined(ARDUINO_ARCH_ESP32)
     Serial.setTxBufferSize(cfg.tx_buffer_size);
     Serial.setRxBufferSize(cfg.rx_buffer_size);
+#endif
     Serial.begin(cfg.baud_rate);
     delay(cfg.startup_delay_ms);
 }

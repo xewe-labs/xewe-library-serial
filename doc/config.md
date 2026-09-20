@@ -41,9 +41,14 @@ void setup() {
 ```
 
 **`begin()` blocks for a second by default.** The delay exists because a USB CDC port (ESP32-C3,
-C6 and S3 with `CDCOnBoot`) needs time to enumerate on the host — without it the first lines of
+C6 and S3 with `CDCOnBoot`, and the native-USB boards generally) needs time to enumerate on the host — without it the first lines of
 output are printed into a port nobody is listening to yet. Set `startup_delay_ms = 0` when you are
 on a real UART and care about boot time.
+
+**`tx_buffer_size` and `rx_buffer_size` are applied on ESP32 only.** It is the only supported core
+that lets a sketch resize the UART/CDC ring buffers; everywhere else the core's own fixed buffers
+are used and the two fields are ignored. Build with `-DXEWE_SERIAL_HAS_BUFFER_SIZING=1` to force
+the calls on a core you know provides them.
 
 Buffer sizes must be set before `Serial.begin`, which is why they live here and cannot be changed
 afterwards.

@@ -2,7 +2,13 @@
 
 > Full reference: [`doc/`](doc/) · Agent rules: [`doc/AGENTS.md`](doc/AGENTS.md)
 
-Non-blocking serial console for ESP32.
+Non-blocking serial console.
+
+Supported cores: ESP32, ESP8266, RP2040, Renesas (Uno R4) and the Arduino mbed cores —
+anything whose toolchain provides C++17 and a C++ standard library. 8-bit AVR (Uno R3, Nano,
+Nano Every) is **not** supported: avr-gcc ships no `<string>`, `<vector>` or `<string_view>`.
+Only ESP32-C3/C6/S3 are compile-verified on hardware; the rest are verified at the language
+level by the host portability check in `publish-arduino-library`.
 
 ```cpp
 #include <XeWeSerial.h>
